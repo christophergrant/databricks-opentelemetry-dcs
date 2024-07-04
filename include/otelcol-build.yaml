@@ -1,0 +1,11 @@
+dist:
+  name: databricks-otel-dcs
+  description: Local OpenTelemetry Collector binary
+  output_path: /opentelemetry/dist
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.103.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/azuremonitorexporter v0.103.0
+receivers:
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.103.0
+processors:
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.103.0
